@@ -3,7 +3,7 @@
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Post::class, function (Faker $faker) {
     $title = $faker->sentence(6, true);
     return [
         'user_id' => 1,

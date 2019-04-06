@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Comment::class, function (Faker $faker) {
     return [
         'post_id' => random_int(1, 50),
         'name' => $faker->sentence(3, true),
