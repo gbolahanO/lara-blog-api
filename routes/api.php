@@ -17,9 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/posts', 'PostController@index');
-Route::get('/posts/create', 'PostController@create');
-Route::post('/posts/store', 'PostController@store');
-Route::get('/posts/{id}/edit', 'PostController@edit');
-Route::post('/posts/{id}/update', 'PostController@update');
-Route::get('/posts/{id}/delete', 'PostController@destroy');
+Route::resource('posts', 'PostController');
+Route::resource('category', 'CategoryController');
