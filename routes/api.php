@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('posts', 'PostController');
 Route::resource('category', 'CategoryController');
+
+Route::post('/comment/{id}', 'CommentController@store');
+Route::get('/comment', 'CommentController@index');
