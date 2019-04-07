@@ -22,12 +22,7 @@ class CommentController extends Controller
         ]);
 
         $post = Post::find($id);
-        // $comment = new Comment;
-        // $comment->name = $request->name;
-        // $comment->email = $request->email;
-        // $comment->text = $request->text;
-
-        // $comment->$post->save();
+        
         $comment = $post->comments()->create([
             'name' => $request->name,
             'email' => $request->email,
