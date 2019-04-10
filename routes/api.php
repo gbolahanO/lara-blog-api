@@ -22,3 +22,6 @@ Route::resource('category', 'CategoryController');
 
 Route::post('/comment/{id}', 'CommentController@store');
 Route::get('/comment', 'CommentController@index');
+
+Route::get('/r/posts/{category_id}', 'FrontEndController@get_posts');
+Route::get('/r/post/{slug}', 'FrontEndController@single_post');
